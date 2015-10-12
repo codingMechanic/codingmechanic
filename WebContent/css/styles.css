@@ -1,0 +1,1260 @@
+.normalText {
+  font-weight: normal;
+  font-size: 100%;
+  line-height: normal;
+  letter-spacing: 0;
+}
+html {
+  /* f�r nicht-css3 browser */
+  background: #3e3e3e;
+  /* f�r IE */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#484848');
+  /* f�r webkit */
+  background: -webkit-linear-gradient(top, #333333, #484848) no-repeat;
+  /* f�r firefox 3.6+ */
+  background: linear-gradient(to bottom, #333333, #484848) no-repeat;
+  min-height: 100%;
+}
+body {
+  margin: 0 auto;
+  background-color: #e5e5e5;
+  max-width: 980px;
+}
+/*-- Mixins --*/
+.subsite-text {
+  font-size: 110%;
+  line-height: 2em;
+}
+.content {
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.tab .caption {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  margin: 0 0 32px 64px !important;
+}
+.pageCaption {
+  text-align: center;
+}
+.bg.indexBg {
+  background: url("../img/bg-codingmechanic-blurred-reversed.jpg") no-repeat;
+}
+.bg.standardBg {
+  background: url("../img/bg-codingmechanic-sw.jpg") no-repeat;
+}
+#home .container-fluid {
+  background: url("../img/bg-codingmechanic-blurred-reversed.jpg") no-repeat 0 -95px;
+}
+#home .pageCaption {
+  display: none;
+}
+.container-fluid {
+  background: url("../img/bg-codingmechanic-sw.jpg") no-repeat 0 -95px;
+}
+#img-logo {
+  padding: 10px 0 10px 20px;
+}
+.header {
+  position: relative;
+  background: url("../img/bg-codingmechanic-blurred-reversed.jpg") no-repeat 0 0;
+  border-bottom: 2px solid #454545;
+}
+.header svg {
+  margin: 5px;
+  border: 1px solid #666666;
+  float: right;
+}
+.copyright {
+  color: #bea01f;
+  font-size: 70%;
+  position: absolute;
+  margin: 0 10px 0 5px;
+}
+.copyright a {
+  color: #bea01f !important;
+  cursor: pointer;
+}
+.header .copyright {
+  right: 0;
+  top: 70px;
+  display: block;
+}
+#footer .copyright {
+  display: none;
+}
+#de {
+  top: 0px;
+}
+.de #de {
+  cursor: default;
+}
+.en #de {
+  cursor: pointer;
+}
+.en #de .black {
+  fill: #666666;
+}
+.en #de .red {
+  fill: #b37d83;
+}
+.en #de .gold {
+  fill: #f2f2da;
+}
+#en {
+  top: 25px;
+}
+.en #en {
+  cursor: default;
+}
+.de #en {
+  cursor: pointer;
+}
+.de #en .blue {
+  fill: #607090;
+}
+.de #en .red {
+  stroke: #b36b73;
+}
+.seek {
+  float: right;
+  margin: 60px 1% 0;
+  width: 15%;
+}
+#home .row1 {
+  background: url("../img/bg-codingmechanic-blurred-white.jpg") no-repeat scroll 10px -95px;
+  border-radius: 0 0 15px 0;
+  border-color: #ffffff;
+  border-style: solid solid solid none;
+  border-width: 2px 2px 2px medium;
+}
+#home .row1 .span12 {
+  min-height: 460px;
+}
+#home .row2 .span4 {
+  padding-top: 10px;
+  text-align: center;
+  max-height: 182px;
+}
+.sharpBg {
+  background: url("../img/bg-codingmechanic-sharp-reversed.jpg") no-repeat 0 0;
+}
+.tagCloudContainer {
+  width: 100%;
+  position: relative;
+  border-radius: 0 0 15px 0;
+  margin-left: -20px;
+}
+.uplink-img {
+  position: absolute;
+  right: 0;
+}
+/*--- TabStack ---*/
+.sidemenu {
+  font-size: 85%;
+  list-style-type: none;
+  position: relative;
+  z-index: 10;
+  left: -20px;
+  top: -95px;
+  width: 100%;
+}
+.tab {
+  border-bottom: 1px solid #807962;
+  border-radius: 0 0 13px 0;
+  border-top: 1px solid #F2F0E6;
+  box-shadow: 0 8px 10px #8A836A;
+  color: #222222;
+  cursor: pointer;
+  height: 50px;
+  margin: 0 !important;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  font-size: 180%;
+  line-height: 2.3em;
+}
+.tab .caption {
+  color: #333333;
+  padding-left: 40px;
+}
+#tab0 {
+  background-position: -45px -110px;
+  top: 110px;
+}
+#tab1 {
+  background-position: -45px -200px;
+  top: 200px;
+}
+#tab2 {
+  background-position: -45px -290px;
+  top: 290px;
+}
+#tab3 {
+  background-position: -45px -380px;
+  top: 380px;
+}
+#tab4 {
+  background-position: -45px -470px;
+  top: 470px;
+}
+.icon {
+  width: 60px;
+  float: left;
+  padding-left: 20px;
+}
+.shut .icon svg {
+  fill: #cccccc;
+}
+.open .icon svg {
+  fill: #F8E37D;
+}
+.profil .icon {
+  background-position: -100px;
+}
+.leistungen .icon {
+  background-position: -400px;
+}
+.referenzen .icon {
+  background-position: -200px;
+}
+.vita .icon {
+  background-position: 0px;
+}
+.kontakt .icon {
+  background-position: -300px;
+}
+.counterBox {
+  height: 0px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  overflow: hidden;
+}
+.counterBox span {
+  background: white;
+  padding: 0.5em 0 0 30px;
+}
+.counterBox a {
+  font-size: 140%;
+  line-height: 3em;
+  padding-right: 30px;
+  color: #382a66;
+}
+.counterBox a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+.counterBox svg:hover {
+  fill: #333333;
+}
+.counterBox a {
+  float: left;
+}
+.counterbox-home {
+  display: block;
+  height: 35px;
+  width: 25px;
+  padding-left: 50px;
+}
+/*--- Ende TabStack ---*/
+.linkIcon {
+  float: right;
+  margin: 0 10px 10px 0;
+}
+.activityBox {
+  /* f�r nicht-css3 browser */
+  background: #ffffff;
+  /* f�r IE */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8d8d8', endColorstr='#ffffff');
+  /* f�r webkit */
+  background: -webkit-linear-gradient(top, #d8d8d8, #ffffff) no-repeat;
+  /* f�r firefox 3.6+ */
+  background: linear-gradient(to bottom, #d8d8d8, #ffffff) no-repeat;
+  border: 1px solid #eeeeee;
+}
+.activityBox > img {
+  max-height: 120px;
+}
+.activityBox h4 {
+  color: #333333;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*--- Tag-Wolke ---*/
+#tagCloud {
+  width: 100%;
+  text-align: center;
+  min-height: 440px;
+  max-height: 440px;
+  line-height: 2em;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.tag1 {
+  font-size: 1em;
+  color: #333333;
+}
+.tag2 {
+  font-size: 1.3em;
+  color: #808080;
+}
+.tag3 {
+  font-size: 1.6em;
+  color: #cccccc;
+}
+#tagcloud a {
+  text-decoration: none;
+  padding: 0 0.1em 0 0.1em;
+}
+#tagcloud a:hover {
+  text-decoration: none;
+  color: #382a66;
+}
+/*-- TagTargets --*/
+#tagTargets .uplink,
+#tagTargets .infoLink,
+#tagTargets .designReferencesProspect,
+#tagTargets .animationReferencesHome,
+#tagTargets .siteReferencesProspect {
+  display: none;
+}
+#tagTargets h4 {
+  margin-bottom: 9px;
+}
+#tagTargets h3 {
+  border-top: 2px solid #382a66;
+}
+#tagTargets .tagCaption-body {
+  font-style: italic;
+}
+#tagTargets .designReferencesProspect {
+  display: none;
+}
+.highlighted-tag {
+  color: #e5cb5e;
+  font-weight: bold;
+}
+/*-- Footer --*/
+#footer {
+  text-align: center;
+  padding: 20px 0 0;
+  color: #333333;
+}
+#footer .span4 {
+  min-height: 0;
+}
+#footer a,
+#footer a:hover {
+  color: #333333;
+}
+.prospect-icon {
+  height: 115px;
+}
+.skills {
+  margin-top: 30px;
+}
+.skills-caption {
+  color: #333333;
+  font-size: 110%;
+  font-weight: bold;
+}
+.skills .chart text {
+  font-size: 75%;
+}
+/*-- profil --*/
+.welcome {
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+  color: #e5cb5e;
+  text-align: right;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+.portrait {
+  box-shadow: 5px 5px 5px #454545;
+  transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-5deg);
+  /* Safari and Chrome */
+}
+#profile .left-col {
+  border-top: 1px solid #999999;
+}
+#profile .clientHome {
+  display: none;
+}
+#client .clientProspect {
+  display: none;
+}
+#profile .ooHome {
+  display: none;
+}
+#oo .ooProspect {
+  display: none;
+}
+#profile .csHome {
+  display: none;
+}
+#cs .csProspect {
+  display: none;
+}
+#profile .uplink {
+  display: none;
+}
+#profile .prospectCaption {
+  display: none;
+}
+#client .prospect-icon,
+#oo .prospect-icon,
+#cs .prospect-icon {
+  display: none;
+}
+#profile .infoLink {
+  float: none;
+}
+.prospect {
+  border-bottom: 1px solid #999999;
+}
+.prospect-body {
+  font-size: 120%;
+  line-height: 30px;
+}
+#skills-pieChart svg {
+  width: 200px;
+  /*height:200px;*/
+}
+#profile .skills-chart {
+  height: 200px;
+}
+#profile .skills-chart .chart {
+  font-size: 100%;
+}
+#profile h3 {
+  margin: 5px 0;
+}
+#client .row-fluid,
+#oo .row-fluid,
+#cs .row-fluid {
+  font-size: 110%;
+  line-height: 2em;
+}
+/*-- client --*/
+svg {
+  font: 10px sans-serif;
+}
+svg.legend {
+  font: 14px sans-serif;
+  padding-left: 10px;
+}
+.x.axis path {
+  fill: #333333;
+}
+.y.axis path {
+  display: none;
+}
+.y.axis line {
+  stroke: #fff;
+  stroke-opacity: 1;
+  shape-rendering: crispEdges;
+}
+.y.axis .zero line {
+  stroke: #333333;
+  stroke-opacity: 1;
+}
+.title {
+  font: 300 78px Helvetica Neue;
+  fill: #666;
+}
+.bar-chart rect,
+.legend rect {
+  fill-opacity: .4;
+}
+.skills-chart rect {
+  fill-opacity: 1;
+}
+.HTML,
+.Java,
+.PS {
+  fill: #cc66cc;
+}
+.JS,
+.Gimp {
+  fill: #0000ff;
+}
+.CSS,
+.SQL,
+.AI {
+  fill: #00ff00;
+}
+.DOM,
+.JSP,
+.InkScape {
+  fill: #ff9900;
+}
+.SVG,
+.Struts2,
+.Flash {
+  fill: #ffff00;
+}
+.CANVAS,
+.Tiles {
+  fill: #00ffff;
+}
+/* leistungen */
+#service .pageCaption {
+  color: #e5cb5e;
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+#service.de .pageCaption {
+  left: -200px;
+  top: 190px;
+}
+#service.en .pageCaption {
+  left: -127px;
+  top: 118px;
+}
+#service h3 {
+  line-height: 0;
+  visibility: hidden;
+}
+.prospect-caption {
+  font-size: 125%;
+  text-decoration: underline;
+}
+#service .frontendServiceHome {
+  display: none;
+}
+#frontend .frontendServiceProspect {
+  display: none;
+}
+#service .softwareServiceHome {
+  display: none;
+}
+#software .softwareServiceProspect {
+  display: none;
+}
+#service .designServiceHome {
+  display: none;
+}
+#design .designServiceProspect {
+  display: none;
+}
+#service .uplink {
+  display: none;
+}
+#frontend li,
+#software li,
+#design li {
+  padding-bottom: 1em;
+}
+#service .prospect-text {
+  color: #666666;
+  font-size: 105%;
+  font-weight: bold;
+  line-height: 2em;
+  text-align: justify;
+}
+.frontendServiceHome ul > li > ul {
+  padding-top: 1em;
+}
+.designServiceHome {
+  text-align: justify;
+}
+/* vita */
+#cV #zeugnisse h3 {
+  line-height: 0;
+  margin: 0.4em;
+  visibility: hidden;
+}
+.certificate-caption {
+  display: none;
+}
+#cV .certificate-subtitle {
+  display: none;
+}
+#zeugnisse .container {
+  padding-left: 75px;
+  width: auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #999999;
+  min-height: 200px;
+}
+#zeugnisse img {
+  border: 1px solid #333333;
+  box-shadow: 3px 3px 3px #cccccc;
+}
+#zeugnisse .zeugnis {
+  display: inline;
+  padding-right: 78px;
+  position: relative;
+}
+#zeugnisse .zeugnis.terminal {
+  /*margin-left: -90px;*/
+  padding-right: 0;
+}
+#certificates .certificate-subtitle {
+  display: block;
+  position: absolute;
+  width: 100px;
+  left: 0;
+}
+.terminal .zeugnis {
+  padding: 0 !important;
+}
+#vita h2 {
+  display: none;
+}
+#vitaProspect {
+  position: relative;
+}
+#vitaProspect td {
+  width: 20%;
+}
+#vita #vitaProspect .span11,
+#certificates #zeugnisse .span11,
+#recreational #freizeit .span11 {
+  margin-left: 0;
+  width: 100%;
+}
+#freizeit {
+  padding-bottom: 30px;
+}
+#freizeit .span4 {
+  text-align: center;
+}
+#freizeit .span3 {
+  text-align: right;
+}
+.recreational-icon {
+  display: none;
+}
+.recreational-caption {
+  float: left;
+  padding-top: 20px;
+}
+.recreational-caption.left {
+  float: left;
+  padding-left: 10px;
+}
+.recreational-caption.right {
+  float: right;
+  padding-right: 10px;
+}
+#freizeit svg {
+  /*float:left;*/
+}
+.hobby svg {
+  fill: #3399ff;
+}
+.hobby .recreational-text {
+  color: #004c99;
+}
+.passion svg {
+  fill: #ffcc00;
+}
+.passion .recreational-text {
+  color: #997a00;
+}
+.sport svg {
+  fill: #33cc00;
+}
+.sport .recreational-text {
+  color: #208000;
+}
+tr.activity td {
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+tr.timeline {
+  height: 20px;
+}
+tr.timeline td {
+  border-top: 4px solid #666666;
+  border-right: 4px solid #666666;
+  text-align: right;
+  padding-right: 1%;
+  height: 3em;
+  vertical-align: bottom;
+}
+tr.timeline td.terminal {
+  border-top: 4px solid #666666;
+  border-right: none;
+}
+svg#timeline {
+  padding-top: 100px;
+}
+#siteReferences .siteReferencesProspect {
+  display: none;
+}
+#cV .vitaHome {
+  display: none;
+}
+.vitaHome {
+  padding: 1em 0;
+  text-align: justify;
+}
+.infoLink {
+  float: right;
+}
+#vita .infoLink {
+  display: none;
+}
+#cV .uplink {
+  display: none;
+}
+/*--- references --*/
+#references .pageCaption,
+#cV .pageCaption,
+#service .pageCaption {
+  /* 	display: none; */
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-90deg);
+  /* Safari and Chrome */
+  position: absolute;
+  color: #e5cb5e;
+  letter-spacing: 0.4em;
+  font-size: 250%;
+  left: -140px;
+  font-weight: 400;
+  letter-spacing: 0.7em;
+  top: 130px;
+}
+#references.en .pageCaption {
+  left: -135px;
+  top: 125px;
+}
+#references.de .pageCaption {
+  left: -175px;
+  top: 165px;
+}
+#cV.de .pageCaption {
+  left: -195px;
+  top: 180px;
+}
+#cV.en .pageCaption {
+  left: -210px;
+  top: 200px;
+}
+#references h3 {
+  visibility: hidden;
+  line-height: 0;
+}
+#references .description {
+  padding-left: 1%;
+}
+#references .description h2 {
+  margin-bottom: 10px;
+}
+#references .description h2 a {
+  color: #333333;
+}
+#references ul {
+  padding-left: 15px;
+  font-size: 100%;
+  margin: 0;
+}
+#references li {
+  padding-bottom: 12px;
+}
+#panel,
+.jcarousel-container {
+  box-shadow: 5px 5px 7px #666666;
+}
+.uplink-caption {
+  float: right;
+  font-size: 80%;
+  font-weight: normal;
+  padding-right: 15px;
+}
+.sitereference .caption {
+  font-weight: bold;
+  padding-top: 0.3em;
+}
+.siteReferencesHome .span4,
+.animationReferencesHome .span4 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.siteReferencesHome img {
+  border: 1px solid #333333;
+  box-shadow: 3px 3px 2px #999999;
+}
+.siteReferencesHome .caption,
+.animationReferencesHome .caption {
+  margin-top: 5px;
+  font-weight: bold;
+}
+#testRow {
+  background-color: black;
+  position: absolute;
+}
+#testRow div {
+  max-height: 0.2em;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+#references .designRefCapt {
+  color: #666666;
+  position: relative;
+  top: 70px;
+  left: -100px;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-90deg);
+  /* Safari and Chrome */
+}
+#lsvn {
+  position: absolute;
+  left: 892px;
+}
+#blackNWhite {
+  position: absolute;
+  z-index: 10;
+}
+#siteReferences .siteReferencesProspect {
+  display: none;
+}
+#designReferences .designReferencesProspect {
+  display: none;
+}
+#references .designReferencesHome {
+  display: none;
+}
+#references .siteReferencesHome {
+  display: none;
+}
+#screen {
+  opacity: 0;
+  max-width: none;
+}
+#panel {
+  background-color: #333333;
+  border: 2px solid white;
+  padding: 5px 10px;
+}
+.animationThumbnails {
+  display: inline;
+}
+#carousel {
+  /*     padding: 0 80px; */
+}
+.jcarousel-skin-richterHp li {
+  min-width: 156px;
+}
+.jcarousel-skin-richterHp li img {
+  height: 150px;
+}
+.jcarousel-skin-richterHp .jcarousel-container {
+  border: 2px solid #ffffff;
+  border-radius: 10px 10px 10px 10px;
+}
+.jcarousel-skin-richterHp .jcarousel-container-horizontal {
+  padding: 0px 30px;
+}
+.jcarousel-skin-richterHp .jcarousel-clip {
+  overflow: hidden;
+}
+.jcarousel-skin-richterHp .jcarousel-item-horizontal {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.jcarousel-skin-richterHp .jcarousel-direction-rtl .jcarousel-item-horizontal {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.jcarousel-skin-richterHp .jcarousel-item-placeholder {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #000000;
+}
+/*--- goggleBox ---*/
+#pageContainer {
+  width: 900px;
+  background-color: transparent;
+  border-width: 0;
+}
+#buttonBar {
+  clear: both;
+  text-align: center;
+  margin-left: 188px;
+}
+#buttonBar img {
+  cursor: pointer;
+}
+img#firstButton {
+  background: url(button.first.png) no-repeat;
+}
+img#lastButton {
+  background: url(button.last.png) no-repeat;
+}
+img#previousButton {
+  background: url(button.previous.png) no-repeat;
+}
+img#nextButton {
+  background: url(button.next.png) no-repeat;
+}
+img#playButton {
+  background: url(button.play.png) no-repeat;
+}
+img#playButton.photomatic-playing {
+  background: url(button.pause.png) no-repeat;
+}
+#animationReferences .animationReferencesProspect {
+  display: none;
+}
+#references .animationReferencesHome {
+  display: none;
+}
+#designReferences h3 {
+  color: #e5cb5e;
+}
+.designReferencesHome.row-fluid {
+  padding-bottom: 2em;
+}
+.designRefCapt {
+  font-weight: bold;
+}
+#designReferences .img-designRef {
+  float: right;
+}
+#designReferences .designRefBody {
+  float: left;
+  text-align: justify;
+}
+.img-designRef {
+  width: 100px;
+}
+.designReferencesHome .designRefCapt {
+  position: static;
+  top: 0;
+  transform: none;
+}
+#sculer-screenshot,
+#axtraxx-screenshot,
+#lsvn-screenshot {
+  width: 100%;
+  box-shadow: 4px 4px 6px #666666;
+}
+#sculerFlashContent,
+#axtraxxFlashContent,
+#lsvnFlashContent {
+  cursor: pointer;
+}
+/*--- Kontakt ---*/
+.kontaktText span {
+  display: block;
+  padding-bottom: 1em;
+}
+.wwFormTable,
+#dispatchEmail_from,
+#dispatchEmail_subject,
+#dispatchEmail_body {
+  width: 98%;
+}
+.wwFormTable .errorMessage {
+  color: #CC0000;
+}
+tr[errorFor] td {
+  text-align: right;
+}
+/*--- Impressum ---*/
+.underlined {
+  text-decoration: underline;
+}
+/*-- tags --*/
+#tags .uplink,
+#tags .infoLink {
+  display: none;
+}
+/*-- activity box --*/
+#softwareDev h4,
+#webEng h4,
+#design h4 {
+  font-size: 120%;
+  color: #e5cb5e;
+}
+/*--- responsive ---*/
+@media (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 767px;
+  }
+  .header svg {
+    position: absolute;
+    right: 5px;
+  }
+  .header .copyright {
+    display: none;
+  }
+  #footer .copyright {
+    display: block;
+  }
+  #home .row1 {
+    border: none;
+  }
+  #home .row1 .span10 {
+    border-bottom: none;
+  }
+  #img-logo {
+    padding-left: 10px;
+  }
+  .tagCloudContainer {
+    width: 100%;
+    background: #ffffff;
+    margin-left: 0;
+  }
+  #tagCloud {
+    min-height: 100px;
+    max-height: 210px;
+  }
+  #home .sidemenu {
+    min-height: 455px;
+  }
+  #home .row1 .span2 {
+    border-top: 1px solid #333333;
+  }
+  /*-- profile --*/
+  #profile .welcome {
+    font-size: 160%;
+    letter-spacing: 0;
+    line-height: 2em;
+  }
+  .portrait {
+    margin: -12% 0% 4% 9%;
+  }
+  /*-- references --*/
+  #panel {
+    width: 45%;
+  }
+  #carousel {
+    width: 50%;
+  }
+  #sculer-screenshot,
+  #axtraxx-screenshot,
+  #lsvn-screenshot {
+    width: 67%;
+  }
+  /*-- cV --*/
+  #cV .certificate-subtitle {
+    display: none;
+  }
+  #certificates .certificate-subtitle {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+  .header {
+    background-position: -300px 0px;
+  }
+  #img-logo {
+    padding: 10px 0 10px 10px;
+    width: 295px;
+  }
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .icon {
+    margin-top: -5px;
+  }
+  .icon svg {
+    width: 42px;
+    margin-left: 10px;
+  }
+  .tab .caption {
+    padding-left: 20px;
+  }
+  .tab {
+    height: 44px;
+    font-size: 150%;
+    line-height: 2.8em;
+    padding: 0;
+  }
+  #tab0 {
+    background-position: -90px -110px;
+    top: 110px;
+  }
+  #tab1 {
+    background-position: -90px -180px;
+    top: 180px;
+  }
+  #tab2 {
+    background-position: -90px -250px;
+    top: 250px;
+  }
+  #tab3 {
+    background-position: -90px -320px;
+    top: 320px;
+  }
+  #tab4 {
+    background-position: -90px -390px;
+    top: 390px;
+  }
+  #tab5 {
+    background-position: -90px -460px;
+    top: 460px;
+  }
+  .counterbox-home {
+    padding-left: 10%;
+  }
+  .counterBox svg {
+    width: 16px;
+    padding-top: 6px;
+  }
+  .counterBox a {
+    font-size: 120%;
+    padding-right: 15px;
+    padding-top: 5px;
+  }
+  #home .sidemenu {
+    min-height: 365px;
+  }
+  #home .row1 {
+    background: url("../img/bg-codingmechanic-blurred-white.jpg") no-repeat scroll -100px -95px transparent;
+    border-color: #FFFFFF;
+  }
+  #carousel {
+    padding: 0 30px;
+  }
+  .jcarousel-skin-richterHp .jcarousel-container-horizontal {
+    padding: 10px 20px;
+  }
+  .activityBox {
+    border-radius: 10px;
+  }
+  /*-- profile --*/
+  #profile .welcome {
+    font-size: 120%;
+    letter-spacing: 0;
+    line-height: 2em;
+  }
+  .portrait {
+    margin: -10% 0 7% 7%;
+    width: 40%;
+  }
+  .skills {
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
+  .portrait-container {
+    height: 60px;
+  }
+  .clientProspect .prospect-icon {
+    text-align: right;
+  }
+  .skills {
+    display: none;
+  }
+  /*-- service --*/
+  #service .pageCaption {
+    font-size: 140%;
+    text-align: left;
+  }
+  #service .prospect-caption {
+    position: absolute;
+    text-align: right;
+  }
+  /*-- references --*/
+  .container-fluid {
+    background-position: -300px -70px;
+  }
+  #service .pageCaption,
+  #references .pageCaption,
+  #cV .pageCaption {
+    display: block;
+    position: static;
+    transform: none;
+    -ms-transform: none;
+    /* IE 9 */
+    -webkit-transform: none;
+    /* Safari and Chrome */
+    color: #e5cb5e;
+    font-size: 160%;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.3em;
+    margin: 15px 0 5px;
+  }
+  #references .row-fluid {
+    border-bottom: 1px solid #666666;
+  }
+  #references h3,
+  #service h3 {
+    margin: 5px;
+  }
+  #panel {
+    width: 93%;
+  }
+  #carousel {
+    width: 80%;
+  }
+  #sculer-screenshot,
+  #axtraxx-screenshot,
+  #lsvn-screenshot {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    width: 80%;
+  }
+  #pdf-broch .designRefCapt {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  /*-- cv ---*/
+  #timeline {
+    display: none;
+  }
+  .certificate-caption {
+    display: block;
+    border-top: 2px solid white;
+  }
+  #zeugnisse .zeugnis {
+    padding-left: 20px;
+  }
+  #zeugnisse .container {
+    padding-left: 0;
+  }
+  #zeugnisse .zeugnis.terminal {
+    margin-left: -20px;
+  }
+  #zeugnisse .zeugnis {
+    padding-right: 0;
+  }
+  .certificate-subtitle {
+    display: none;
+  }
+  #cV #vitaProspect h3 {
+    margin-bottom: -20px;
+  }
+  .recreational-text {
+    text-align: left;
+  }
+  .span4.hobby,
+  .span4.passion {
+    padding-bottom: 1.5em;
+  }
+  #freizeit .span3 {
+    text-align: center;
+  }
+}

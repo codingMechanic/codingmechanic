@@ -1,0 +1,68 @@
+.icon {
+	position: relative;
+	height: 53px;
+	width: 65px;
+	left: 20px;
+	top: -2px;
+	background-repeat: no-repeat;
+	display: block;
+	overflow: hidden;
+	text-indent: -99999px;
+}
+
+.flag-icon {
+	display: block;
+    position: absolute;
+    height: 15px;
+    width: 30px;
+}
+.flag-icon.de {
+    left: 90%;
+    top: 10px;
+}
+.flag-icon.en {
+    left: 90%;
+    top: 30px;
+}
+
+.counterbox-home {
+	background-position: 30px 10px;
+}
+
+svg {
+	display:none;
+}
+
+/*-- profil --*/
+.clientProspect .prospect-icon {
+	background-position-x: 180px;
+}
+
+/*--- leistungen ---*/
+.service-icon {
+	width:70px;
+	height:70px;
+}
+/* #service.de .pageCaption { */
+/*     left: 0px; */
+/*     top: 0px; */
+/* } */
+/* #service.en .pageCaption { */
+/*     left: -100px; */
+/*     top: 0px; */
+/* } */
+
+/*-- references --*/
+#reference.de .pageCaption {
+	left: -300px;
+}
+#reference.en .pageCaption {
+	left: -300px
+}	
+
+/*-- recreational --*/
+.recreational-icon {
+	display: block;
+	height: 64px;
+	width: 64px;
+}

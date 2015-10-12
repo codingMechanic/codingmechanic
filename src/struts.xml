@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- <constant name="struts.action.excludePattern" value="/CodingMechanicServlet"/> -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.custom.i18n.resources" value="content" />
+    
+<!--     <constant name="struts.locale" value="de" /> -->
+	<package name="codingmechanic" extends="struts-default">
+		
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+		
+		<!-- action-name ist der letzte Teil der URL, action-class ist die Klasse, die durch die URL aufgerufen wird, action-methode ist die aufzurufende Methode in der Klasse -->
+		<action name="index" class="de.codingmechanic.action.OpenHome" method="execute">
+			<!-- result-name erzeugt die View entsprechend dem Rückgabewert der von action aufgerufenen Methode (result-name) -->
+			<result name="success" type="tiles">/home.tiles</result>
+		</action>
+		
+		<action name="profil" class="de.codingmechanic.action.OpenProfil" method="execute">
+			<result name="success" type="tiles">
+				/profile.tiles
+			</result>
+			<param name="contentType">application/xhtml+xml</param>
+		</action>
+		
+		<action name="client"
+			class="de.codingmechanic.action.OpenClient"
+			method="execute">
+			<result name="success" type="tiles">/client.tiles</result>
+		</action>
+		
+		<action name="oo"
+			class="de.codingmechanic.action.OpenOo"
+			method="execute">
+			<result name="success" type="tiles">/oo.tiles</result>
+		</action>
+		
+		<action name="cs"
+			class="de.codingmechanic.action.OpenCs"
+			method="execute">
+			<result name="success" type="tiles">/cs.tiles</result>
+		</action>
+		
+		<action name="service"
+			class="de.codingmechanic.action.OpenService"
+			method="execute">
+			<result name="success" type="tiles">/service.tiles</result>
+		</action>
+		
+		<action name="frontend"
+			class="de.codingmechanic.action.OpenFrontend"
+			method="execute">
+			<result name="success" type="tiles">/frontend.tiles</result>
+		</action>
+		
+		<action name="software"
+			class="de.codingmechanic.action.OpenSoftware"
+			method="execute">
+			<result name="success" type="tiles">/software.tiles</result>
+		</action>
+		
+		<action name="design"
+			class="de.codingmechanic.action.OpenDesign"
+			method="execute">
+			<result name="success" type="tiles">/design.tiles</result>
+		</action>
+		
+		<action name="references"
+			class="de.codingmechanic.action.OpenReferenzen"
+			method="execute">
+			<result name="success" type="tiles">/references.tiles</result>
+		</action>
+		
+		<action name="siteReferences"
+			class="de.codingmechanic.action.OpenSiteReferenzen"
+			method="execute">
+			<result name="success" type="tiles">/siteReferences.tiles</result>
+		</action>
+		
+		<action name="designReferences"
+			class="de.codingmechanic.action.OpenDesignReferenzen"
+			method="execute">
+			<result name="success" type="tiles">/designReferences.tiles</result>
+		</action>
+		
+		<action name="animationReferences"
+			class="de.codingmechanic.action.OpenAnimationReferenzen"
+			method="execute">
+			<result name="success" type="tiles">/animationReferences.tiles</result>
+		</action>
+		
+		<action name="curriculumVitae"
+			class="de.codingmechanic.action.OpenCurriculumVitae" method="execute">
+			<result name="success" type="tiles">/CurriculumVitae.tiles</result>
+		</action>
+		
+		<action name="vita"
+			class="de.codingmechanic.action.OpenVita" method="execute">
+			<result name="success" type="tiles">/Vita.tiles</result>
+		</action>
+		
+		<action name="zeugnisse"
+			class="de.codingmechanic.action.OpenCertificates" method="execute">
+			<result name="success" type="tiles">/Zeugnisse.tiles</result>
+		</action>
+		
+		<action name="freizeit"
+			class="de.codingmechanic.action.OpenRecreational" method="execute">
+			<result name="success" type="tiles">/recreational.tiles</result>
+		</action>
+		
+		<action name="kontakt"
+			class="de.codingmechanic.action.OpenKontakt" method="execute">
+            <result name="success" type="tiles">/Kontakt.tiles</result>
+		</action>
+		
+		<action name="dispatchEmail"
+			class="de.codingmechanic.action.DispatchEmail" method="execute">
+            <result name="success" type="tiles">/Confirmation.tiles</result>
+            <result name="error" type="tiles">/Kontakt.tiles</result>
+            <result name="input" type="tiles">/Kontakt.tiles</result>
+		</action>
+		
+		<action name="confirmation"
+			class="de.codingmechanic.action.OpenConfirmation" method="execute">
+            <result name="success" type="tiles">/Confirmation.tiles</result>
+		</action>
+		
+		<action name="impressum"
+			class="de.codingmechanic.action.OpenImprint" method="execute">
+            <result name="success" type="tiles">/Impressum.tiles</result>
+		</action>
+		
+		<action name="tags"
+			class="de.codingmechanic.action.OpenTags" method="execute">
+            <result name="success" type="tiles">/Tags.tiles</result>
+		</action>
+        
+	</package>
+
+</struts>

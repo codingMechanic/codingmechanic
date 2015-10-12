@@ -1,0 +1,164 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<link href="css/styles.css" rel="stylesheet">
+<!-- <link href="css/styles.less" rel="stylesheet/less" type="text/css" > -->
+<!-- <script src="js/less-1.4.1.min.js" type="text/javascript"></script> -->
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="css/no-svg.css" />
+<link rel="stylesheet" type="text/css" href="css/lte8.css" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8.css" />
+<![endif]-->
+
+<script src="js/modernizr-2.6.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+// if (document.readyState === "complete") {
+	//prüfe anhand der durch Modernizr hinzugefügten Klassen des html-Elements, ob Inline-SVGs unterstützt werden...
+// 	if( !/inlinesvg/.test(document.getElementsByTagName('html')[0].getAttribute('class')) ) {
+// 	if( !document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0") ) {
+// 	if( typeof window.SVGElement == 'undefined'  ) {
+	if( !Modernizr.inlinesvg ) {
+		//... wenn nicht, binde css-Datei mit PNG-backgrounds ein
+		document.write('<link rel="stylesheet" type="text/css" href="css/no-svg.css">');
+		document.write('<link rel="stylesheet" type="text/css" href="css/iOs4.css">');
+	}
+// }
+
+var charts = (function() {
+	
+	//Object-Detection für SVG
+	if(!Modernizr.inlinesvg)
+		return;
+	
+	//hex color darkener (http://www.sitepoint.com/javascript-generate-lighter-darker-color/)
+	var dim = function(hex, lum) {
+		// validate hex string
+		hex = String(hex).replace(/[^0-9a-f]/gi, '');
+		if (hex.length < 6) {
+			hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+		}
+		lum = lum || 0;
+		// convert to decimal and change luminosity
+		var rgb = "#", c, i;
+		for (i = 0; i < 3; i++) {
+			c = parseInt(hex.substr(i * 2, 2), 16);
+			c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+			rgb += ("00" + c).substr(c.length);
+		}
+		return rgb;
+	};
+
+	var barchart = function(elem, content) {
+		var margin = {top: 20, right: 10, bottom: 30, left: 10},
+		    width = 335 - margin.left - margin.right,
+		    height = 200 - margin.top - margin.bottom;
+	
+		var x = d3.scale.ordinal()
+		    .rangeRoundBands([0, width], .1);
+	
+		var y = d3.scale.linear()
+		    .range([height, 0]);
+	
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom")
+		    .tickSize(2);
+	
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left")
+		    .tickSize(-width)
+		    .tickFormat(function(d) { return ''; })
+		    .tickValues([1, 2, 3, 4, 5]);
+	
+		var svg = d3.select(elem).append("svg")
+		    .attr("width", width + margin.left + margin.right)
+		    .attr("height", height + margin.top + margin.bottom)
+		    .attr("class", 'bar-chart')
+		  	.append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+		d3.tsv(content, function(error, data) {
+		  x.domain(data.map(function(d) { return d.tech; }));
+		  y.domain([0, d3.max(data, function(d) { return d.level; })]);
+			function technology(d) { return d.tech;};
+	
+		  svg.append("g")
+		      .attr("class", "x axis")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(xAxis);
+	
+		  svg.append("g")
+		      .attr("class", "y axis")
+		      .call(yAxis)
+		    .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 6)
+		      .attr("dy", ".71em")
+		      .style("text-anchor", "end")
+		      .text("");
+	
+		  svg.selectAll(".bar")
+		      .data(data)
+		    .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("class", function(d) { return d.tech;})
+		      .attr("x", function(d) { return x(d.tech); })
+		      .attr("width", x.rangeBand())
+		      .attr("y", height /*function(d) { return y(d.level); }*/)
+		      .attr("height", 0 /*function(d) { return height - y(d.level); }*/);
+	
+			//füge Legende an Diagramm an
+			var legend = d3.select(elem).append("svg")
+			  .attr("class", "legend")
+			  .attr("width", width- margin.left)
+			  .attr("height", height + margin.bottom)
+			.selectAll("g")
+			  .data(data)
+			//enter(): returns the entering selection: placeholder nodes for each data element for which no corresponding existing DOM element was found in the current selection.
+			.enter().append("g")
+			  .attr("transform", function(d, i) { return "translate(0," + i * 30 + ")"; });
+			
+			  legend.append("rect")
+			      .attr("width", 18)
+			      .attr("height", 18)
+			      .attr("class", function(d) { return d.tech;});
+			
+			  legend.append("text")
+			      .attr("x", 24)
+			      .attr("y", 9)
+			      .attr("dy", ".35em")
+			      .text(function(d) { return d.legend; });
+
+				d3.select(window).on('load', function() {
+
+					var bars = d3.select('.bar-chart').selectAll("rect")[0].reverse();
+					 //verschachtelte timeouts zum sequentiellen Animieren statt gleichzeitiger Animation aller Balken
+					setTimeout(function rollBar() {
+						if(bars.length) {
+							d3.select(bars.pop())
+							.transition()
+						    .duration(1000)
+					        .attr("y", function(d) { return y(d.level);})
+						    .attr("height", function(d) { return height - y(d.level); })
+						    .ease("elastic");
+							setTimeout(rollBar, 100);
+						}
+					}, 0);
+				    
+				});
+				
+			});
+		};
+	return {dim:dim, bars:barchart};
+})();
+
+</script>

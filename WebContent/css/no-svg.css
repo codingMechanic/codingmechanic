@@ -1,0 +1,62 @@
+.shut .icon {
+	background-image: url("../img/bg-start-icons-inactive.png");
+}
+.open .icon {
+	background-image: url("../img/bg-start-icons-active.png");
+}
+
+.de .flag-icon.de {
+	background-image: url("../img/de-flag-icon.png");
+}
+.de .flag-icon.en {
+	background-image: url("../img/en-flag-icon-inactive.png");
+}
+.en .flag-icon.de {
+	background-image: url("../img/de-flag-icon-inactive.png");
+}
+.en .flag-icon.en {
+	background-image: url("../img/en-flag-icon.png");
+}
+
+.uplink-SVG {
+	background-image: url("../img/uplink.png");
+}
+.counterbox-home {
+	background: url('../img/bg-home-icon.png') 50px 10px no-repeat;
+}
+
+/*--- profil ---*/
+.clientProspect .prospect-icon {
+	background: url('../img/bg-client.png') no-repeat;
+	background-position-y: 20px;
+}
+.ooProspect .prospect-icon {
+	background: url('../img/bg-server.png') no-repeat;
+	background-position-y: 5px;
+}
+.csProspect .prospect-icon {
+	background: url('../img/bg-creative.png') no-repeat;
+	background-position-y: 20px;
+}
+
+/*--- leistungen ---*/
+.frontend-icon {
+	background: url('../img/bg-frontend-icon.png') no-repeat;
+}
+.software-icon {
+	background: url('../img/bg-software-icon.png') no-repeat;
+}
+.design-icon {
+	background: url('../img/bg-design-icon.png') no-repeat;
+}
+
+/*-- recreational --*/
+#hobby-icon {
+	background: url("../img/bg-segelflug.png");
+}
+#passion-icon {
+	background: url("../img/bg-musikproduktion.png");
+}
+#sport-icon {
+	background: url("../img/bg-mountainbike.png");
+}

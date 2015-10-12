@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    
+    <definition name="base" template="/base.jsp" >
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+    
+    <definition name="tagTargetBase" template="/tagTargetBase.jsp" preparer="de.codingmechanic.business.TagTargetViewPreparer" >
+        <put-attribute name="header" value="/header.jsp" />
+        <put-attribute name="footer" value="/footer.jsp" />
+    </definition>
+    
+    <!--  Start -->
+    <definition name="/home.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="home" />
+        <put-attribute name="title" value="home.title" />
+        <put-attribute name="body" value="/homeBody.jsp" />
+    </definition>
+    
+    <!-- Profil -->
+    <definition name="/profile.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="profile" />
+        <put-attribute name="title" value="profile.title" />
+        <put-attribute name="body" value="profile.body"/>
+    </definition>
+    <definition name="profile.body" template="header-row_two_column_three_rows.jsp">
+  		<put-attribute name="caption" value="" />
+  		<put-attribute name="header" value="/profil.jsp" />
+  		<put-attribute name="row1-1" value="/client.jsp" />
+  		<put-attribute name="row1-2" value="/oo.jsp" />
+  		<put-attribute name="row1-3" value="/cs.jsp" />
+  		<put-attribute name="row2-1" value="/skills-profile.jsp" />
+	</definition>
+    <definition name="/client.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="client" />
+        <put-attribute name="title" value="client.title" />
+        <put-attribute name="body" value="/client.jsp"/>
+    </definition>
+    <definition name="/oo.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="oo" />
+        <put-attribute name="title" value="oo.title" />
+        <put-attribute name="body" value="/oo.jsp"/>
+    </definition>
+    <definition name="/cs.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="cs" />
+        <put-attribute name="title" value="cs.title" />
+        <put-attribute name="body" value="/cs.jsp"/>
+    </definition>
+    
+    <!-- Leistungen -->
+    <definition name="/service.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="service" />
+        <put-attribute name="title" value="service.title" />
+        <put-attribute name="body" value="service.body"/>
+    </definition>
+    <definition name="service.body" template="three_rows.jsp">
+  		<put-attribute name="caption" value="service.caption" />
+  		<put-attribute name="row1" value="/frontend.jsp" />
+  		<put-attribute name="row2" value="/software.jsp" />
+  		<put-attribute name="row3" value="/design.jsp" />
+	</definition>
+    <definition name="/frontend.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="frontend" />
+        <put-attribute name="title" value="frontendService.title" />
+        <put-attribute name="body" value="/frontend.jsp"/>
+    </definition>
+    <definition name="/software.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="software" />
+        <put-attribute name="title" value="softwareService.title" />
+        <put-attribute name="body" value="/software.jsp"/>
+    </definition>
+    <definition name="/design.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="design" />
+        <put-attribute name="title" value="designService.title" />
+        <put-attribute name="body" value="/design.jsp"/>
+    </definition>
+    
+	<!-- Vita -->
+    <definition name="/CurriculumVitae.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="cV" />
+        <put-attribute name="title" value="cv.title" />
+        <put-attribute name="body" value="curriculumVitae.body" />
+    </definition>
+    <definition name="curriculumVitae.body" template="three_rows.jsp">
+  		<put-attribute name="caption" value="cv.caption" />
+  		<put-attribute name="row1" value="/vitaProspect.jsp" />
+  		<put-attribute name="row2" value="/zeugnisse.jsp" />
+  		<put-attribute name="row3" value="/freizeit.jsp" />
+	</definition>
+    <definition name="/Vita.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="vita" />
+        <put-attribute name="title" value="vita.title" />
+        <put-attribute name="body" value="vita.body"/>
+    </definition>
+    <definition name="vita.body" template="two_rows.jsp">
+  		<put-attribute name="caption" value="vita.caption" />
+  		<put-attribute name="row1" value="/vitaProspect.jsp" />
+  		<put-attribute name="row2" value="/vitaHome.jsp" />
+	</definition>
+    <definition name="/Zeugnisse.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="certificates" />
+        <put-attribute name="title" value="certificates.title" />
+        <put-attribute name="body" value="/zeugnisse.jsp"/>
+    </definition>
+    <definition name="/recreational.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="recreational" />
+        <put-attribute name="title" value="recreational.title" />
+        <put-attribute name="body" value="/freizeit.jsp"/>
+    </definition>
+    
+    <!-- Referenzen -->
+    <definition name="/references.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="references" />
+        <put-attribute name="title" value="references.title" />
+        <put-attribute name="body" value="references.body"/>
+    </definition>
+    <definition name="references.body" template="three_rows.jsp">
+  		<put-attribute name="caption" value="references.caption" />
+  		<put-attribute name="row1" value="/siteReferences.jsp" />
+  		<put-attribute name="row2" value="/designReferences.jsp" />
+  		<put-attribute name="row3" value="/animationReferences.jsp" />
+	</definition>
+    <definition name="/siteReferences.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="siteReferences" />
+        <put-attribute name="title" value="siteReferences.title" />
+        <put-attribute name="body" value="/siteReferences.jsp"/>
+    </definition>
+    <definition name="/designReferences.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="designReferences" />
+        <put-attribute name="title" value="designReferences.title" />
+        <put-attribute name="body" value="/designReferences.jsp"/>
+    </definition>
+    <definition name="/animationReferences.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="animationReferences" />
+        <put-attribute name="title" value="animationReferences.title" />
+        <put-attribute name="body" value="/animationReferences.jsp"/>
+    </definition>
+    
+    <definition name="/Kontakt.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="contact" />
+        <put-attribute name="title" value="contact.title" />
+    	<put-attribute name="caption" value="contact.title"/>
+        <put-attribute name="body" value="/kontaktBody.jsp" />
+    </definition>
+    
+    <definition name="/Confirmation.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="confirmation" />
+        <put-attribute name="title" value="contact.title" />
+        <put-attribute name="body" value="/confirmation.jsp" />
+    </definition>
+    
+    <definition name="/Impressum.tiles" extends="base">
+    	<put-attribute name="pageId" type="string" value="imprint" />
+        <put-attribute name="title" value="legal.title" />
+        <put-attribute name="body" value="/impressum.jsp" />
+    </definition>
+    
+    <definition name="/Tags.tiles" extends="tagTargetBase" >
+    	<put-attribute name="pageId" type="string" value="tagTargets" />
+        <put-attribute name="title" value="home.title" />
+    </definition>
+	
+</tiles-definitions>
