@@ -48,8 +48,8 @@ public class DispatchEmail extends ActionSupport {
 	javax.mail.Authenticator authentication = new javax.mail.Authenticator() {
 		@Override
 		public PasswordAuthentication getPasswordAuthentication() {
-			return new PasswordAuthentication("info@codingmechanic.de",
-					"67?Palawer");
+			return new PasswordAuthentication("",
+					"");
 		}
 	};
 
